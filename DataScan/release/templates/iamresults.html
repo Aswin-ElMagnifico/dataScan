@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+</head>
+<body>
+<h4>FDA Scan results</h4><p align="center">Search querry: {{ month }}</p> <hr/><br /><br />
+<ol>
+    {% for firms in resultset %}
+        <li>
+            {% for info in firms %}
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp {{ info }} <br><br>
+            {% endfor %}
+            <br><hr><br>
+        </li>
+    {% endfor %}
+</ol>
+
+</body>
+</html>

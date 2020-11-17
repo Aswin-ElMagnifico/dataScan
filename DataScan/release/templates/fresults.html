@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+</head>
+<body>
+<h4>FDA Scan results</h4><p align="center">firm no: {{ fei }} </p> <hr/><br /><br />
+
+<h5>Inspection Details</h5>
+
+Inspection ID: {{ insp[0] }} <br>
+Inspection End Date:  {{ insp[1] }}  <br>
+Project Area: {{ insp[2] }}  <br>
+Product Type: {{ insp[3] }}  <br>
+Classification: {{ insp[4] }}  <br>
+
+ <br><hr /> <br>
+
+<h5>Import refusals</h5>
+<ol>
+{% for tuples in refu %}
+    <li>
+    <b>Product Code and Description:</b> {{ tuples[0] }} <br>
+    <b>Refused Date:</b> {{ tuples[1] }} <br>
+    <b>Refusal Charge:</b> {{ tuples[2] }} <br><br>
+    </li>
+
+{% endfor %}
+</ol>
+ <br><hr /> <br>
+
+
+
+<br />
+
+<h5>Warning Letters</h5>
+
+<b>{{warn[1]}}</b>
+<br>
+<b>{{warn[2]}}</b>
+<br />
+<br>
+link: <a href="{{warn[0]}}">{{warn[0]}}</a>
+<br><br><br><hr>
+</body>
+</html>
